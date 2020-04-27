@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<head>
+	<title>Airdrop</title>
+</head>
+<body class="jumbotron">
+<script src="static/js/bootstrap.js"> </script>
+
+<style type="text/css">
+	A {
+		text-decoration: none;
+	}
+</style>
+
+<div class="jumbotron" align="center">
+  <h1 class="display-4" align="center">Airdrop</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p>Табица содержит все загруженные файлы</p>
+	<table border="6px">
+	<tr><th>Таблица файлов</th></tr>
+
+	{% for i in my_list %}
+	<tr><td> <a download href='upload/{{ i }}'> {{ i }} </a></td></tr>
+	{% endfor %}
+
+	</table>
+	<br>
+
+</p>
+
+<br>
+	<a class="btn btn-primary btn-lg" href="/" role="button"> На Главную </a>
+
+
+</div>
+
+</body>
+</html>
